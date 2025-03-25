@@ -10,11 +10,11 @@ public class Csv {
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 if (values.length >= 5) {
-                    String sku = values[0];
-                    double priceRetail = Double.parseDouble(values[1]);
-                    double priceCurrent = Double.parseDouble(values[2]);
-                    String productName = values[3];
-                    String category = values[4];
+                    String sku = values[6];
+                    double priceRetail = Double.parseDouble(values[9]);
+                    double priceCurrent = Double.parseDouble(values[10]);
+                    String productName = values[18];
+                    String category = values[0];
                     tree.insert(sku, productName, category, priceRetail, priceCurrent);
                 }
             }
